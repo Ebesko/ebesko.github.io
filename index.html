@@ -77,12 +77,6 @@
     padding-right: 20px;
   }
   
-  .sidemenu {
-    flex: 1; /* 1/3 of the width */
-    background-color: #f4f4f4;
-    padding: 20px;
-  }
-  
   footer {
     background-color: #ffffff;
     color: rgb(95, 95, 95);
@@ -183,18 +177,60 @@
   <hr style="height:4px;border-width:0;color:rgb(238, 238, 238);background-color:rgb(238, 238, 238)">
   <hr style="height:4px;border-width:0;color:rgb(238, 238, 238);background-color:rgb(238, 238, 238)">
   <main>
-    <div class="content">
-      <h2>Accueil</h2>
-    </div>
-    <div class="sidemenu">
-      <h2>Sidemenu</h2>
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
+      <div class="content">
+          <h2>App</h2>
+          <p>
+              Cette application web a pour but de vous aider à remplir votre feuille Erasmus+ qui permet l'obtention de la bourse Erasmus+.
+              Cette bourse est destiné à toute année supérieure à 1 (au moins 2 semestres passés à Bielefeld).
+              Vous pouvez également utiliser cet outil pour visualiser quels cours prendre ce semestre.
+              A noter que certains cours sont à choisir parmi une sélection.
+              Pour des raisons de sécurité, les données ne sont pas stockés et tous les champs sont réinitialisés si vous quittez le site.
+          </p>
+          <p>Etant donné que la structure du cursus ou des mineures est parfois changée, veuillez entrer votre année d'inscription.</p>
+          <p>
+              <label for="year">Votre année d'inscription:</label><br><br>
+              <select name="year" id="year" required>
+                  <option value="24">WiSe 2024 (semestre d'hiver 2024)</option>
+              </select>
+          </p>
+          <form method="get" action="">
+              <p>
+                  <label for="prenom">Votre prénom</label> : <input type="text" name="prenom" id="prenom" placeholder="Prénom"><br><br>
+                  <label for="nom">Votre nom</label> : <input type="text" name="nom" id="nom" placeholder="Nom">
+              </p>
+          </form>
+          <form method="get" action="">
+              <p>
+                  Veuillez indiquer si vous avez une mineure ou deux petites mineures:<br><br>
+                  <input type="radio" name="minor" value="nbf" id="nbf" required> <label for="nbf">Nebenfach (Une seule mineure)</label><br>
+                  <input type="radio" name="minor" value="k-nbf" id="k-nbf" required> <label for="k-nbf">Kleines Nebenfach (deux petites mineures)</label><br>
+              </p>
+          </form>
+          <form method="get" action="">
+              <p>
+                  <label for="mineure">De quelle mineure s'agit-il?</label><br><br>
+                  <select name="mineure" id="mineure" required>
+                      <option value="bild">Bild- und Kunstgeschichte (Histoire de l'Art)</option>
+                      <option value="politik">Politik</option>
+                      <option value="socio">Soziologie</option>
+                      <option value="latin">Latin</option>
+                  </select>
+              </p>
+          </form>
+          <form method="get" action="">
+              <p>
+                  <label for="semestre">En quel semestre êtes-vous ?</label><br><br>
+                  <select name="semestre" id="semestre" required>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="autre">Redoublement, cocher cours à repasser</option>
+                  </select>
+              </p>
+          </form>
+          <input type="submit" value="Générer les cours">
       </div>
-    </div>
   </main>
   <footer>
         <br><br>
