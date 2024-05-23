@@ -1,0 +1,27 @@
+p {
+    font-size: large;
+}
+
+body {
+    background-image: url("https://bipagcifah.files.wordpress.com/2021/06/rgb_fbiis_2013_03_02_01-1920x1080-1.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.carre {
+    width  : fit-content;
+    height : fit-content;
+    background : rgb(207, 157, 82);
+    margin: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    
+  }
