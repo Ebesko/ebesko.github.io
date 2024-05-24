@@ -162,6 +162,14 @@
   .topnav input[type=text] {
     border: 1px solid #ccc;  
   }
+
+  #cauche {
+    display: none;
+    }
+
+  #cauche.show {
+    display: block;
+    }
 }
 
 
@@ -226,11 +234,14 @@
                       <option value="2">2</option>
                       <option value="3">3</option>
                       <option value="4">4</option>
-                      <option value="autre">Redoublement, cocher cours à repasser</option>
+                      <option value="autre">Redoublement (tout montrer)</option>
                   </select>
               </p>
           </form>
           <input id="generate" type="submit" value="Générer les cours">
+          <p id="cache">
+              truc à cacher 1
+          </p>
       </div>
       <div class="trytest"></div>
   </main>
