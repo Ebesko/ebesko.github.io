@@ -1,8 +1,7 @@
-﻿const formed = document.querySelector('form');
-const thankYouMessage = document.querySelector('#thank-you-message');
-
-formed.addEventListener("click", (e) => {
-    e.preventDefault();
-    thankYouMessage.classList.add('show');
-    setTimeout(() => 2000);
-});
+﻿function showStuff(id, text, btn) {
+    document.getElementById(id).style.display = 'block';
+    // hide the lorem ipsum text
+    document.getElementById(text).style.display = 'none';
+    // hide the link
+    btn.style.display = 'none';
+}
