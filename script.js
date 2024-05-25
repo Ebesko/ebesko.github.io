@@ -10,3 +10,8 @@ function showStuff(id, text, btn) {
     document.getElementById(id).style.display = 'block';
     btn.style.display = 'block';
 }
+
+function megatest(id) {
+    var klong = document.getElementById(id);
+    console.log(klong);
+}
