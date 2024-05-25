@@ -11,7 +11,10 @@ function showStuff(id, text, btn) {
     btn.style.display = 'block';
 }
 
-function megatest(id) {
-    var klong = document.getElementById(id);
+
+
+const sem = document.getElementById(semestre);
+function megatest(sem) {
+    var klong = Object.fromEntries(sem);
     console.log(klong);
 }
