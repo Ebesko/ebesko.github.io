@@ -165,13 +165,6 @@
                 border: 1px solid #ccc;
             }
 
-            #thank-you-message {
-                display: none;
-            }
-
-                #thank-you-message.show {
-                    display: block;
-                }
         }
     </style>
 </head>
@@ -184,16 +177,6 @@
         </header>
         <br>
         <main>
-            <td class="post">
-                <a href="#" onclick="showStuff('answer1', 'text1', this); return false;">Edit</a>
-                <span id="answer1" style="display: none;">
-                    <p>
-                        truc à cacher 1
-                    </p>
-                </span>
-
-                <span id="text1">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</span>
-            </td>
             <div class="content">
                 <h2>App</h2>
                 <p>
@@ -210,12 +193,6 @@
                         <option value="24">WiSe 2024 (semestre d'hiver 2024)</option>
                     </select>
                 </p>
-                <form method="get" action="">
-                    <p>
-                        <label for="prenom">Votre prénom</label> : <input type="text" name="prenom" id="prenom" placeholder="Prénom"><br><br>
-                        <label for="nom">Votre nom</label> : <input type="text" name="nom" id="nom" placeholder="Nom">
-                    </p>
-                </form>
                 <form method="get" action="">
                     <p>
                         Veuillez indiquer si vous avez une mineure ou deux petites mineures:<br><br>
@@ -246,9 +223,11 @@
                         </select>
                     </p>
                 </form>
-                <input id="generate" type="submit" value="Générer les cours">
+                <input id="generate" type="submit" value="Générer les cours" onclick="showStuff('test1', 'generate', this); return false;">
+                <p id="test1">
+                    Truc à cacher 1
+                </p>
             </div>
-            <div class="trytest"></div>
         </main>
         <footer>
             <br><br>
