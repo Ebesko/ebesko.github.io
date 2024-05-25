@@ -1,7 +1,7 @@
-﻿function showStuff(id, text, btn) {
-    document.getElementById(id).style.display = 'block';
+﻿function showStuff(id_to_show, link_block, clicked_link) {
+    document.getElementById(id_to_show).style.display = 'block';
     // hide the lorem ipsum text
-    document.getElementById(text).style.display = 'none';
+    document.getElementById(link_block).style.display = 'block';
     // hide the link
-    btn.style.display = 'none';
+    clicked_link.style.display = 'none';
 }
