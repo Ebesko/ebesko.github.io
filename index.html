@@ -54,17 +54,20 @@
                     <p>
                         <label for="semestre">En quel semestre êtes-vous ?</label><br><br>
                         <select name="semestre" id="semestre" required>
+                            <option value="0">Tout montrer</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
-                            <option value="autre">Redoublement (tout montrer)</option>
                         </select>
                     </p>
                 </form>
-                <input id="generate" type="button" value="Générer les cours" onclick="showStuff('test1', 'generate', this); return false;">
+                <input id="generate" type="button" value="Générer les cours" onclick="showStuff('test1', 'test2', this); return false;">
                 <p id="test1">
                     Thing to hide 1
+                </p>
+                <p id="test2">
+                    Thing to hide 2
                 </p>
             </div>
         </main>
