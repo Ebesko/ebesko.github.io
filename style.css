@@ -1,27 +1,93 @@
-p {
-    font-size: large;
-}
-
 body {
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: Arial, sans-serif;
     background-image: url("https://bipagcifah.files.wordpress.com/2021/06/rgb_fbiis_2013_03_02_01-1920x1080-1.jpg");
-    background-position: center;
-    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh; 
-    overflow-y: scroll;
-    padding: 20px;
+    background-attachment: fixed;
 }
 
-.carre {
-    width  : fit-content;
-    height : fit-content;
-    background : rgb(207, 157, 82);
-    margin: auto;
-    margin-left: 5%;
-    margin-right: 5%;
+a:hover {
+    color: rgb(28, 124, 124)
+}
+
+.container {
+    background-color: rgb(255, 255, 255); /* Green rectangle with transparency */
+    padding: 100px;
+    margin: auto; /* Margin to still see a little bit of background */
+    max-width: 1000px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3, p {
+    color: rgb(125, 136, 136);
+}
+
+nav {
+    background-color: #ffffff;
+    color: rgb(95, 95, 95);
+    padding: 10px 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-right: 40px; /* Adjust spacing between navigation items */
+    }
+
+    nav a {
+        color: rgb(148, 158, 157);
+        font-size: small;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: none;
+    }
+
+main {
+    display: flex;
+}
+
+#test1 {
+    display: none;
+}
+
+.logo {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.content {
+    flex: 2; /* 2/3 of the width */
+    padding-right: 20px;
+}
+
+footer {
+    background-color: #ffffff;
+    color: rgb(95, 95, 95);
     padding: 20px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    
-  }
+    text-align: center;
+}
+
+.footer-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+    .footer-images img {
+        width: 300px; /* Adjust image width as needed */
+        margin: 0 25px; /* Adjust spacing between images */
+    }
