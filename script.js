@@ -3,5 +3,5 @@
     // hide the lorem ipsum text
     document.getElementById(link_block).style.display = 'block';
     // hide the link
-    clicked_link.style.display = 'none';
+    clicked_link.style.display = 'block';
 }
