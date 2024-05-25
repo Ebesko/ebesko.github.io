@@ -165,6 +165,9 @@
                 border: 1px solid #ccc;
             }
 
+            #test1 {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -223,9 +226,9 @@
                         </select>
                     </p>
                 </form>
-                <input id="generate" type="submit" value="Générer les cours" onclick="showStuff('test1', 'generate', this); return false;">
+                <input id="generate" type="button" value="Générer les cours" onclick="showStuff('test1', 'generate', this); return false;">
                 <p id="test1">
-                    Truc à cacher 1
+                    Thing to hide 1
                 </p>
             </div>
         </main>
