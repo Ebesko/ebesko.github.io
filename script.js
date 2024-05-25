@@ -8,5 +8,5 @@
 
 function showStuff(id, text, btn) {
     document.getElementById(id).style.display = 'block';
-    btn.style.display = 'none';
+    btn.style.display = 'block';
 }
