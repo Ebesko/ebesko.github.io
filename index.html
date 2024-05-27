@@ -35,18 +35,18 @@
                     </p>
                     <p>
                         Veuillez indiquer si vous avez une mineure ou deux petites mineures:<br><br>
-                        <input type="radio" name="minor" value="nbf" id="nbf" required> <label for="nbf">Nebenfach (Une seule mineure)</label><br>
-                        <input type="radio" name="minor" value="k-nbf" id="k-nbf" required> <label for="k-nbf">Kleines Nebenfach (deux petites mineures)</label><br>
+                        <input type="radio" name="minortyp" value="nbf" id="nbf" required> <label for="nbf">Nebenfach (Une seule mineure)</label><br>
+                        <input type="radio" name="minortyp" value="k-nbf" id="k-nbf" required> <label for="k-nbf">Kleines Nebenfach (deux petites mineures)</label><br>
                     </p>
                     <p>
-                        <select name="year" id="year" required>
+                        <select name="minortyptest" id="minortyptest" required>
                             <option value="nbf">Nebenfach (Une seule mineure)</option>
                             <option value="knbf">Kleines Nebenfach (deux petites mineures)</option>
                         </select>
                     </p>
                     <p>
-                        <label for="mineure">De quelle mineure s'agit-il?</label><br><br>
-                        <select name="mineure" id="mineure" required>
+                        <label for="minor">De quelle mineure s'agit-il?</label><br><br>
+                        <select name="minor" id="minor" required>
                             <option value="bild">Bild- und Kunstgeschichte (Histoire de l'Art)</option>
                             <option value="politik">Politik</option>
                             <option value="socio">Soziologie</option>
@@ -54,8 +54,8 @@
                         </select>
                     </p>
                     <p>
-                        <label for="semestre">En quel semestre êtes-vous ?</label><br><br>
-                        <select name="semestre" id="semestre" required onclick="megatest(semestre)">
+                        <label for="semester">En quel semestre êtes-vous ?</label><br><br>
+                        <select name="semester" id="semester" required onclick="megatest(semestre)">
                             <option value="all">Tout montrer</option>
                             <option value="1">1</option>
                             <option value="2">2</option>

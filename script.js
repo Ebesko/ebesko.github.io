@@ -15,12 +15,22 @@ function showStuff(id, text, btn) {
 
 const data = new FormData(myform);
 function megatest(data) {
-    console.log("total" + data);
+    console.log("total" + data);//NON
     var tonk = Object.fromEntries(data);
-    console.log("total2" + data.value);
+    console.log("total2" + data.value);//OUI
     var nom = document.getElementById("semestre");
-    console.log(nom);
-    console.log(nom.value);
+    console.log(nom);//NON
+    console.log(nom.value);//OUI
+}
+
+function getdiffvalues(data) {
+    var tonk = Object.fromEntries(data);
+    var year = document.getElementById("year");
+    var nbftyp = document.getElementById("minortyp");
+    var semester = document.getElementById("semester");
+    console.log("total qui marche: " + data.value);//---------------------------------------------------------------------------------------------------------OUI
+    console.log("année: " + year.value + "nbftyp: " + nbftyp.value + "semestre: " + semester.value);//----------------------------------------------------------OUI
+    console.log("TONK: " + tonk.value);
 }
 
 function handleSubmit(e) {
