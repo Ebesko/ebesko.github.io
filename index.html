@@ -55,7 +55,7 @@
                     </p>
                     <p>
                         <label for="semester">En quel semestre êtes-vous ?</label><br><br>
-                        <select name="semester" id="semester" required onclick="megatest(semestre)">
+                        <select name="semester" id="semester" required onclick="getdiffvalues()">
                             <option value="all">Tout montrer</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -71,7 +71,7 @@
                 <p id="test2">
                     Thing to hide 2
                 </p>
-                <input id="generate" type="button" value="Générer data" onclick="megatest(semestre)">
+                <input id="generate" type="button" value="Générer data" onclick="getdiffvalues()">
             </div>
         </main>
         <footer>

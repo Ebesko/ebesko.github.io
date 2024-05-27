@@ -23,7 +23,8 @@ function megatest(data) {
     console.log(nom.value);//OUI
 }
 
-function getdiffvalues(data) {
+function getdiffvalues() {
+    const data = new FormData(myform);
     var tonk = Object.fromEntries(data);
     var year = document.getElementById("year");
     var nbftyp = document.getElementById("minortyp");
