@@ -60,7 +60,7 @@ main {
     display: flex;
 }
 
-#to_show_when_generate, #minor_p, #generate-hidden {
+#to_show_when_generate {
     display: none;
 }
 
