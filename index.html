@@ -37,10 +37,10 @@
                         Veuillez indiquer si vous avez une mineure ou deux petites mineures:<br><br>
                         <select name="minortyptest" id="minortyptest" required>
                             <option value="nbf">Nebenfach (Une seule mineure) </option>
-                            <option value="knbf">Kleines Nebenfach (deux petites mineures)</option>
+                            <option value="knbf">Kleines Nebenfach (Deux petites mineures)</option>
                         </select>
                     </p>
-                    <p>
+                    <p id="minor">
                         <label for="minor">De quelle mineure s'agit-il?</label><br><br>
                         <select name="minor" id="minor" required>
                             <option value="bild">Bild- und Kunstgeschichte (Histoire de l'Art)</option>
@@ -51,7 +51,7 @@
                     </p>
                     <p>
                         <label for="semester">En quel semestre êtes-vous ?</label><br><br>
-                        <select name="semester" id="semester" required onclick="getdiffvalues()">
+                        <select name="semester" id="semester" required>
                             <option value="all">Tout montrer</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -60,13 +60,29 @@
                         </select>
                     </p>
                 </form>
-                <input id="generate" type="button" value="Générer les cours" onclick="showStuff('test1', 'test2', this); return false;">
-                <p id="test1">
-                    Thing to hide 1
-                </p>
-                <p id="test2">
-                    Thing to hide 2
-                </p>
+                <div id="generate-hidden">
+                    <input id="generate" type="button" value="Générer les cours" onclick="showStuff('to_show_when_generate', 'to_hide_when_generate', this); return false;">
+                    <div id="head_array">
+                        <p id="test1">
+                            Numéro de cours
+                        </p>
+                        <p id="test2">
+                            Nom
+                        </p>
+                        <p id="test3">
+                            ECTS
+                        </p>
+                        <p id="test4">
+                            Au choix
+                        </p>
+                    </div>
+                    <p id="to_hide_when_generate">
+                        Cliquer sur 'Générer' pour générer les cours.
+                    </p>
+                    <p id="to_show_when_generate" onclick="minitest()">
+                        Félicitations, vous avez cliqué !
+                    </p>
+                </div>
                 <input id="generate" type="button" value="Générer data" onclick="getdiffvalues()">
             </div>
         </main>
