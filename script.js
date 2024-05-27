@@ -13,10 +13,10 @@ function showStuff(id, text, btn) {
 }
 
 
-const data = new FormData(myform)
+const data1 = new FormData(myform);
+var data = Object.fromEntries(data1);
 function megatest(data) {
-    var klang = Object.fromEntries(data);
-    console.log("klang:" + klang);
+    console.log("total" + data);
     const test1 = data.get(mineure);
     const test2 = data.get(semestre);
     console.log("mineure" + test1);
