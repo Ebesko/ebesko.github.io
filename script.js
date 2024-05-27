@@ -13,13 +13,12 @@ function showStuff(id, text, btn) {
 }
 
 
-
+var klong = Object.fromEntries(sem);
 const sem = document.getElementById(semestre)
 const data = new FormData(myform)
-function megatest(sem) {
-    var klong = Object.fromEntries(sem);
+function megatest() {
     var klang = Object.fromEntries(data);
-    console.log("klong:"+klong);
+    console.log("klong:");
     console.log("klang:" + klang);
     const test1 = data.get(mineure);
     const test2 = data.get(semestre);
