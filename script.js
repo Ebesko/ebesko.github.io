@@ -27,12 +27,12 @@ function getdiffvalues() {
     const data = new FormData(myform);
     var tonk = Object.fromEntries(data);
     var year = document.getElementById("year");
-    var nbftyp = document.getElementById("minortyp");
+    //var nbftyp = document.getElementById("minortyp");
     var nbftyp2 = document.getElementById("minortyptest");
     var semester = document.getElementById("semester");
     console.log("TONK: " + tonk.value);
     console.log("total qui marche: " + data.value);//---------------------------------------------------------------------------------------------------------OUI
-    console.log("année: " + year.value + "nbftyp: " + nbftyp.value + "nbftyp2: " + nbftyp2.value + "semestre: " + semester.value);//-------------------OUI
+    console.log("année: " + year.value + "nbftyp: " + nbftyp2.value + "semestre: " + semester.value);//-------------------------------------------------------OUI
 }
 
 function handleSubmit(e) {
