@@ -32,14 +32,12 @@
                         <option value="24">WiSe 2024 (semestre d'hiver 2024)</option>
                     </select>
                 </p>
-                <form method="get" action="">
+                <form method="get" action="" id="myform">
                     <p>
                         Veuillez indiquer si vous avez une mineure ou deux petites mineures:<br><br>
                         <input type="radio" name="minor" value="nbf" id="nbf" required> <label for="nbf">Nebenfach (Une seule mineure)</label><br>
                         <input type="radio" name="minor" value="k-nbf" id="k-nbf" required> <label for="k-nbf">Kleines Nebenfach (deux petites mineures)</label><br>
                     </p>
-                </form>
-                <form method="get" action="">
                     <p>
                         <label for="mineure">De quelle mineure s'agit-il?</label><br><br>
                         <select name="mineure" id="mineure" required>
@@ -49,8 +47,6 @@
                             <option value="latin">Latin</option>
                         </select>
                     </p>
-                </form>
-                <form method="get" action="">
                     <p>
                         <label for="semestre">En quel semestre êtes-vous ?</label><br><br>
                         <select name="semestre" id="semestre" required onclick="megatest(semestre)">

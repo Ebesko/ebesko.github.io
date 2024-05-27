@@ -13,8 +13,19 @@ function showStuff(id, text, btn) {
 
 
 
-const sem = document.getElementById(semestre);
+const sem = document.getElementById(semestre)
+const data = new FormData(myform)
 function megatest(sem) {
     var klong = Object.fromEntries(sem);
+    var klang = Object.fromEntries(data);
     console.log(klong);
+    console.log(klang);
+}
+
+function handleSubmit(e) {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const formProps = Object.fromEntries(formData);
+    console.log(formProps);
+    
 }
