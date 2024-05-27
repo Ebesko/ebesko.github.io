@@ -14,7 +14,6 @@ function showStuff(id, text, btn) {
 
 
 const data = new FormData(myform);
-var data1 = Object.fromEntries(data1);
 function megatest(data) {
     console.log("total" + data);
     const test1 = data.get(mineure);
