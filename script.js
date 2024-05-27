@@ -13,8 +13,8 @@ function showStuff(id, text, btn) {
 }
 
 
-const data1 = new FormData(myform);
-var data = Object.fromEntries(data1);
+const data = new FormData(myform);
+var data1 = Object.fromEntries(data1);
 function megatest(data) {
     console.log("total" + data);
     const test1 = data.get(mineure);
@@ -29,5 +29,4 @@ function handleSubmit(e) {
     const formData = new FormData(e.target);
     const formProps = Object.fromEntries(formData);
     console.log(formProps);
-    
 }
