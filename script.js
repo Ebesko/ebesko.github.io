@@ -17,7 +17,10 @@ const data = new FormData(myform);
 function megatest(data) {
     console.log("total" + data);
     var tonk = Object.fromEntries(data);
-    console.log("total2" + data);
+    console.log("total2" + data.value);
+    var nom = document.getElementById("semestre");
+    console.log(nom);
+    console.log(nom.value);
 }
 
 function handleSubmit(e) {
