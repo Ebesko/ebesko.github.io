@@ -15,11 +15,16 @@ function showStuff(id, text, btn) {
 
 const sem = document.getElementById(semestre)
 const data = new FormData(myform)
-function megatest(sem) {
+function megatest() {
     var klong = Object.fromEntries(sem);
     var klang = Object.fromEntries(data);
-    console.log(klong);
-    console.log(klang);
+    console.log("klong:"+klong);
+    console.log("klang:" + klang);
+    const test1 = data.get(mineure);
+    const test2 = data.get(semestre);
+    console.log("mineure" + test1);
+    console.log("semestre" + test2);
+
 }
 
 function handleSubmit(e) {

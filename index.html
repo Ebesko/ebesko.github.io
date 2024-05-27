@@ -26,17 +26,23 @@
                     Pour des raisons de sécurité, les données ne sont pas stockés et tous les champs sont réinitialisés si vous quittez le site.
                 </p>
                 <p>Etant donné que la structure de la majeure d'Histoire ou des mineures est parfois changée, veuillez entrer votre année d'inscription.</p>
-                <p>
-                    <label for="year">Votre année d'inscription:</label><br><br>
-                    <select name="year" id="year" required>
-                        <option value="24">WiSe 2024 (semestre d'hiver 2024)</option>
-                    </select>
-                </p>
                 <form method="get" action="" id="myform">
+                    <p>
+                        <label for="year">Votre année d'inscription:</label><br><br>
+                        <select name="year" id="year" required>
+                            <option value="24">WiSe 2024 (semestre d'hiver 2024)</option>
+                        </select>
+                    </p>
                     <p>
                         Veuillez indiquer si vous avez une mineure ou deux petites mineures:<br><br>
                         <input type="radio" name="minor" value="nbf" id="nbf" required> <label for="nbf">Nebenfach (Une seule mineure)</label><br>
                         <input type="radio" name="minor" value="k-nbf" id="k-nbf" required> <label for="k-nbf">Kleines Nebenfach (deux petites mineures)</label><br>
+                    </p>
+                    <p>
+                        <select name="year" id="year" required>
+                            <option value="nbf">Nebenfach (Une seule mineure)</option>
+                            <option value="knbf">Kleines Nebenfach (deux petites mineures)</option>
+                        </select>
                     </p>
                     <p>
                         <label for="mineure">De quelle mineure s'agit-il?</label><br><br>
@@ -49,8 +55,8 @@
                     </p>
                     <p>
                         <label for="semestre">En quel semestre êtes-vous ?</label><br><br>
-                        <select name="semestre" id="semestre" required onclick="megatest(semestre)">
-                            <option value="0">Tout montrer</option>
+                        <select name="semestre" id="semestre" required onclick="megatest()">
+                            <option value="all">Tout montrer</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -65,6 +71,7 @@
                 <p id="test2">
                     Thing to hide 2
                 </p>
+                <input id="generate" type="button" value="Générer data" onclick="megatest()">
             </div>
         </main>
         <footer>
