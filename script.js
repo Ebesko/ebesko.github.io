@@ -16,11 +16,8 @@ function showStuff(id, text, btn) {
 const data = new FormData(myform);
 function megatest(data) {
     console.log("total" + data);
-    const test1 = data.get(mineure);
-    const test2 = data.get(semestre);
-    console.log("mineure" + test1);
-    console.log("semestre" + test2);
-
+    var tonk = Object.fromEntries(data);
+    console.log("total2" + data);
 }
 
 function handleSubmit(e) {
