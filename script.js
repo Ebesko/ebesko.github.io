@@ -8,6 +8,7 @@
 
 function showStuff(id, text, btn) {
     document.getElementById(id).style.display = 'block';
+    text.style.display = 'block';
     btn.style.display = 'block';
 }
 
@@ -15,7 +16,7 @@ function showStuff(id, text, btn) {
 
 const sem = document.getElementById(semestre)
 const data = new FormData(myform)
-function megatest() {
+function megatest(sem) {
     var klong = Object.fromEntries(sem);
     var klang = Object.fromEntries(data);
     console.log("klong:"+klong);
