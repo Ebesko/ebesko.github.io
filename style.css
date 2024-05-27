@@ -60,8 +60,12 @@ main {
     display: flex;
 }
 
-#test1, #test2, #to_show_when_generate {
+#to_show_when_generate, #minor_p, #generate-hidden {
     display: none;
+}
+
+#test1, #test2, #test1, #test2{
+    display: inline;
 }
 
 .logo {

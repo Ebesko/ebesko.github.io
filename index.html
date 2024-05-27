@@ -37,7 +37,7 @@
                     </p>
                     <p>
                         Veuillez indiquer si vous avez une mineure ou deux petites mineures:<br><br>
-                        <select name="minortyptest" id="minortyptest" required>
+                        <select name="minortyptest" id="minortyptest" required onclick="hiddenBefore(minor_p, generate-hidden, this)">
                             <option value="nbf">Nebenfach (Une seule mineure) </option>
                             <option value="knbf">Kleines Nebenfach (Deux petites mineures)</option>
                         </select>
@@ -50,8 +50,6 @@
                             <option value="socio">Soziologie</option>
                             <option value="latin">Latin</option>
                         </select>
-                    </p>
-                    <p>
                         <label for="semester">En quel semestre êtes-vous ?</label><br><br>
                         <select name="semester" id="semester" required>
                             <option value="all">Tout montrer</option>
@@ -84,8 +82,8 @@
                     <p id="to_show_when_generate" onclick="minitest()">
                         Félicitations, vous avez cliqué !
                     </p>
+                    <input id="generate" type="button" value="Générer data" onclick="getdiffvalues()">
                 </div>
-                <input id="generate" type="button" value="Générer data" onclick="getdiffvalues()">
             </div>
         </main>
         <footer>
