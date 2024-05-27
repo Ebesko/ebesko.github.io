@@ -37,7 +37,7 @@
                     </p>
                     <p>
                         Veuillez indiquer si vous avez une mineure ou deux petites mineures:<br><br>
-                        <select name="minortyptest" id="minortyptest" required onclick="hiddenBefore(minor_p, generate-hidden, this)">
+                        <select name="minortyptest" id="minortyptest" required onclick="hiddenBefore('minor_p', 'generate-hidden', this); return false;">
                             <option value="nbf">Nebenfach (Une seule mineure) </option>
                             <option value="knbf">Kleines Nebenfach (Deux petites mineures)</option>
                         </select>
