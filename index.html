@@ -28,7 +28,7 @@
                     Pour des raisons de sécurité, les données ne sont pas stockés et tous les champs sont réinitialisés si vous quittez le site.
                 </p>
                 <p>Etant donné que la structure de la majeure d'Histoire ou des mineures est parfois changée, veuillez entrer votre année d'inscription.</p>
-                <form method="get" action="" id="myform">
+                <form method="get" action="" id="myform" class="tougoudoum">
                     <p>
                         <label for="year">Votre année d'inscription:</label><br><br>
                         <select name="year" id="year" required>
@@ -50,7 +50,7 @@
                             <option value="socio">Soziologie</option>
                             <option value="latin">Latin</option>
                         </select>
-                        <label for="semester">En quel semestre êtes-vous ?</label><br><br>
+                        <br><br><label for="semester">En quel semestre êtes-vous ?</label><br><br>
                         <select name="semester" id="semester" required>
                             <option value="all">Tout montrer</option>
                             <option value="1">1</option>
@@ -62,20 +62,14 @@
                 </form>
                 <div id="generate-hidden">
                     <input id="generate" type="button" value="Générer les cours" onclick="showStuff('to_show_when_generate', 'to_hide_when_generate', this); return false;">
-                    <div id="head_array">
-                        <p id="test1">
-                            Numéro de cours
-                        </p>
-                        <p id="test2">
-                            Nom
-                        </p>
-                        <p id="test3">
-                            ECTS
-                        </p>
-                        <p id="test4">
-                            Au choix
-                        </p>
+                    <br><br>
+                    <div class="courses">
+                        <div class="box">🐸 Élément 1</div>
+                        <div class="box">🦊 Élément 2</div>
+                        <div class="box">🦄 Élément 3</div>
+                        <div class="box">🐶 Élément 4</div>
                     </div>
+                    <br>
                     <p id="to_hide_when_generate">
                         Cliquer sur 'Générer' pour générer les cours.
                     </p>
