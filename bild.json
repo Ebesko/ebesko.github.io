@@ -1,0 +1,14 @@
+﻿[
+  {
+    "num": "26",
+    "nom": "Grunndlagen",
+    "ECTS": 60,
+    "semestre": "1er"
+  },
+  {
+    "num": "30",
+    "nom": "Profilmodul",
+    "ECTS": 40,
+    "semestre": "2eme"
+  }
+]

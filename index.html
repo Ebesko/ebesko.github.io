@@ -22,13 +22,13 @@
                 <h2>App</h2>
                 <p>
                     Cette application web a pour but de vous aider à remplir votre feuille Erasmus+ qui permet l'obtention de la bourse Erasmus+.
-                    Cette bourse est destiné à toute année supérieure à 1 (au moins 2 semestres passés à Bielefeld).
+                    Cette bourse est disponible à partir de la Licence 2.
                     Vous pouvez également utiliser cet outil pour visualiser quels cours prendre ce semestre.
-                    A noter que certains cours sont à choisir parmi une sélection.
-                    Pour des raisons de sécurité, les données ne sont pas stockés et tous les champs sont réinitialisés si vous quittez le site.
+                    A noter que certains cours sont à choisir parmi une sélection (signalé dans la colonne "au choix").
+                    Pour des raisons de sécurité, les données ne sont pas stockées et tous les champs sont réinitialisés si vous quittez le site.
                 </p>
                 <p>Etant donné que la structure de la majeure d'Histoire ou des mineures est parfois changée, veuillez entrer votre année d'inscription.</p>
-                <form method="get" action="" id="myform" class="tougoudoum">
+                <form method="get" action="" id="myform" class="theform">
                     <p>
                         <label for="year">Votre année d'inscription:</label><br><br>
                         <select name="year" id="year" required>
@@ -70,6 +70,7 @@
                         <div class="box">ECTS</div>
                         <div class="box">Au choix</div>
                     </div>
+                    <div class="modul"></div>
                     <br>
                     <p id="to_hide_when_generate">
                         Cliquer sur 'Générer' pour générer les cours.

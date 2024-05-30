@@ -24,3 +24,23 @@ function minitest() {
     var nbfname = document.getElementById("minor");
     document.getElementById("to_show_when_generate").innerHTML = nbfname.value;
 }
+
+// Récupération des cours depuis le fichier JSON
+const reponse = await fetch("bild.json");
+const bild = await reponse.json();
+
+const module = bild[0];
+const numberElement = document.createElement("p");
+numberElement.innerText = module.num;
+const nomElement = document.createElement("p");
+nomElement.innerText = module.nom;
+const pointsElement = document.createElement("p");
+pointsElement.innerText = `ECTS: ${module.ECTS}`;
+const semesterElement = document.createElement("p");
+semesterElement.innerText = module.semestre;
+
+const divmodulen = document.querySelector(".modul");
+divmodulen.appendChild(numberElement);
+divmodulen.appendChild(nomElement);
+divmodulen.appendChild(pointsElement);
+divmodulen.appendChild(semesterElement);
