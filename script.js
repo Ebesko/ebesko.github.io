@@ -36,8 +36,18 @@ function minitest() {
 }
 
 async function start() {
-    // Récupération des cours depuis le fichier JSON
+    //Clean before use
     document.getElementById("generated").innerHTML = "";
+
+    // Récupération des données de formulaire
+    const data = new FormData(myform);
+    var tonk = Object.fromEntries(data);
+    var year = document.getElementById("year");
+    var nbftyp2 = document.getElementById("minortyptest");
+    var nbfname = document.getElementById("minor");
+    var semester = document.getElementById("semester");
+
+    // Récupération des cours depuis le fichier JSON
     const reponse = await fetch("bild.json");
     const bild = await reponse.json();
 
@@ -56,12 +66,22 @@ async function start() {
         choiceElement.innerText = module.choix;
 
         var divmodulen = document.querySelector(".modul");
-        divmodulen.appendChild(numberElement);
-        divmodulen.appendChild(nomElement);
-        divmodulen.appendChild(pointsElement);
-        divmodulen.appendChild(semesterElement);
-        divmodulen.appendChild(choiceElement);
-
+        if (semester != "all") {
+            if (module.semestre == semester) {
+                divmodulen.appendChild(numberElement);
+                divmodulen.appendChild(nomElement);
+                divmodulen.appendChild(pointsElement);
+                divmodulen.appendChild(semesterElement);
+                divmodulen.appendChild(choiceElement);
+            }
+        }
+        else {
+            divmodulen.appendChild(numberElement);
+            divmodulen.appendChild(nomElement);
+            divmodulen.appendChild(pointsElement);
+            divmodulen.appendChild(semesterElement);
+            divmodulen.appendChild(choiceElement);
+        }
     }
     document.getElementById("generated").style.display = 'grid';
     
