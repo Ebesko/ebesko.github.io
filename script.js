@@ -46,13 +46,16 @@ async function start() {
     var nbftyp2 = document.getElementById("minortyptest");
     var nbfname = document.getElementById("minor");
     var semester = document.getElementById("semester");
+    console.log("Got formular");
 
     // Récupération des cours depuis le fichier JSON
     const reponse = await fetch("bild.json");
     const bild = await reponse.json();
+    console.log("Got json");
 
     for (modules in bild) {
 
+        console.log("in loop");
         var module = bild[modules];
         var numberElement = document.createElement("p");
         numberElement.innerText = module.num;
@@ -67,15 +70,21 @@ async function start() {
 
         var divmodulen = document.querySelector(".modul");
         if (semester != "all") {
+            console.log("semester not all");
             if (module.semestre == semester) {
+                console.log("equality");
                 divmodulen.appendChild(numberElement);
                 divmodulen.appendChild(nomElement);
                 divmodulen.appendChild(pointsElement);
                 divmodulen.appendChild(semesterElement);
                 divmodulen.appendChild(choiceElement);
             }
+            else {
+                console.log("semesters not equal");
+            }
         }
         else {
+            console.log("in else");
             divmodulen.appendChild(numberElement);
             divmodulen.appendChild(nomElement);
             divmodulen.appendChild(pointsElement);
