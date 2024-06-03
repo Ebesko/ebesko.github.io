@@ -38,9 +38,9 @@ async function start() {
     const reponse = await fetch("bild.json");
     const bild = await reponse.json();
 
-    for (module in bild) {
+    for (modules in bild) {
 
-        const module = bild[module];
+        const module = bild[modules];
         const numberElement = document.createElement("p");
         numberElement.innerText = module.num;
         const nomElement = document.createElement("p");
