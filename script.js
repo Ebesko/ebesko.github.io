@@ -52,12 +52,15 @@ async function start() {
         pointsElement.innerText = module.ECTS;
         var semesterElement = document.createElement("p");
         semesterElement.innerText = module.semestre;
+        var choiceElement = document.createElement("p");
+        choiceElement.innerText = module.choix;
 
         var divmodulen = document.querySelector(".modul");
         divmodulen.appendChild(numberElement);
         divmodulen.appendChild(nomElement);
         divmodulen.appendChild(pointsElement);
         divmodulen.appendChild(semesterElement);
+        divmodulen.appendChild(choiceElement);
 
     }
     document.getElementById("generated").style.display = 'grid';
