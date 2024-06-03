@@ -1,5 +1,5 @@
 ﻿function showStuff(id, text, btn) {
-    document.getElementById(id).style.display = 'block';
+    document.getElementById(id).style.display = 'grid';
     document.getElementById(text).style.display = 'none';
     btn.style.display = 'block';
 }
@@ -45,4 +45,6 @@ async function start() {
     divmodulen.appendChild(nomElement);
     divmodulen.appendChild(pointsElement);
     divmodulen.appendChild(semesterElement);
+
+    document.getElementById(generated).style.display = 'grid';
 }
