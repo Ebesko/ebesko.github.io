@@ -4,6 +4,14 @@
     btn.style.display = 'block';
 }
 
+function showSpecial(id, text, btn) {
+    document.getElementById(id).style.display = 'block';
+    document.getElementById(text).style.display = 'none';
+    document.getElementById("showfirst").style.display = 'none';
+    document.getElementById("generate").disabled = false; 
+    btn.style.display = 'block';
+}
+
 function hiddenBefore(id, text, btn) {
     document.getElementById(id).style.display = 'block';
     document.getElementById(text).style.display = 'block';
@@ -36,7 +44,7 @@ async function start() {
     const nomElement = document.createElement("p");
     nomElement.innerText = module.nom;
     const pointsElement = document.createElement("p");
-    pointsElement.innerText = `ECTS: ${module.ECTS}`;
+    pointsElement.innerText = module.ECTS;
     const semesterElement = document.createElement("p");
     semesterElement.innerText = module.semestre;
 

@@ -1,14 +1,29 @@
 ﻿[
   {
-    "num": "26",
-    "nom": "Grunndlagen",
-    "ECTS": 60,
-    "semestre": "1er"
+    "num": "22-1.1_a",
+    "nom": " Grundmodul Antike",
+    "ECTS": 10,
+    "semestre": 1
   },
+
   {
-    "num": "30",
-    "nom": "Profilmodul",
-    "ECTS": 40,
-    "semestre": "2eme"
+    "num": "22-1.2_b",
+    "nom": "Grundmodul Mittelalter/ Frühe Neuzeit - Moderne",
+    "ECTS": 20,
+    "semestre": 2
+  },
+
+  {
+    "num": "22-2.5",
+    "nom": "Modul Geschichte und Öffentlichkeit Sommerschulen",
+    "ECTS": 10,
+    "semestre": 3
+  },
+
+  {
+    "num": "22-3.1/22-3.2",
+    "nom": "Hauptmodul Vormoderne oder Hauptmodul Moderne",
+    "ECTS": 10,
+    "semestre": 4
   }
 ]

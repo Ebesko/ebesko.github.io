@@ -37,12 +37,15 @@
                     </p>
                     <p>
                         Veuillez indiquer si vous avez une mineure ou deux petites mineures:<br><br>
-                        <select name="minortyptest" id="minortyptest" required onclick="hiddenBefore('minor_p', 'generate-hidden', this); return false;">
-                            <option value="nbf">Nebenfach (Une seule mineure) </option>
-                            <option value="knbf">Kleines Nebenfach (Deux petites mineures)</option>
+                        <select name="minortyptest" id="minortyptest" required>
+                            <option value="nbf" onclick="showSpecial('minor1', 'minor2', this); return false;">Nebenfach (Une seule mineure) </option>
+                            <option value="knbf" onclick="showSpecial('minor2', 'minor1', this); return false;">Kleines Nebenfach (Deux petites mineures)</option>
                         </select>
                     </p>
-                    <p id="minor_p">
+
+                    <p id="showfirst">Veuillez choisir un type de mineure.</p>
+
+                    <p id="minor1">
                         <label for="minor">De quelle mineure s'agit-il?</label><br><br>
                         <select name="minor" id="minor" required>
                             <option value="bild">Bild- und Kunstgeschichte (Histoire de l'Art)</option>
@@ -52,22 +55,39 @@
                         </select>
                         <br><br><label for="semester">En quel semestre êtes-vous ?</label><br><br>
                         <select name="semester" id="semester" required>
-                            <option value="all">Tout montrer</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
+                            <option value="all">Montrer tous les semestres</option>
+                            <option value="1">1 semestre</option>
+                            <option value="2">2 semestre</option>
+                            <option value="3">3 semestre</option>
+                            <option value="4">4 semestre</option>
+                        </select>
+                    </p>
+
+                    <p id="minor2">
+                        <label for="minor">De quelle petite mineure s'agit-il?</label><br><br>
+                        <select name="minor" id="minor" required>
+                            <option value="aesthetisch">Ästhetische Bildung</option>
+                            <option value="litt">Literatur</option>
+                        </select>
+                        <br><br><label for="semester">En quel semestre êtes-vous ?</label><br><br>
+                        <select name="semester" id="semester" required>
+                            <option value="all">Montrer tous les semestres</option>
+                            <option value="1">1 semestre</option>
+                            <option value="2">2 semestre</option>
+                            <option value="3">3 semestre</option>
+                            <option value="4">4 semestre</option>
                         </select>
                     </p>
                 </form>
                 <div id="generate-hidden">
 
-                    <input id="generate" type="button" value="Générer les cours" onclick="showStuff('to_show_when_generate', 'to_hide_when_generate', this); return false;" style="display:block">
+                    <input id="generate" type="button" value="Générer les cours" disabled onclick="showStuff('to_show_when_generate', 'to_hide_when_generate', this); return false;" style="display:block">
                     <br>
                     <div class="courses">
                         <div class="box">Numéro de module</div>
                         <div class="box">Nom de module</div>
                         <div class="box">ECTS</div>
+                        <div class="box">Semestre</div>
                         <div class="box">Au choix</div>
                     </div>
 
@@ -75,21 +95,12 @@
                             <div class="box">22-1.1_a</div>
                             <div class="box">Grundmodul Antik</div>
                             <div class="box">10</div>
+                            <div class="box">1.</div>
                             <div class="box">Pflicht</div>
                     </div>
 
-                        <div class="modul" id="generated"></div>
+                    <div class="modul" id="generated"></div>
 
-                    <br>
-                    <input id="generate" type="button" value="Test" onclick="start()">
-                    <br>
-                    <p id="to_hide_when_generate">
-                        Cliquer sur 'Générer' pour générer les cours.
-                    </p>
-                    <p id="to_show_when_generate" onclick="minitest()">
-                        Félicitations, vous avez cliqué !
-                    </p>
-                    <input id="generate" type="button" value="Générer data" onclick="getdiffvalues()">
                 </div>
             </div>
         </main>

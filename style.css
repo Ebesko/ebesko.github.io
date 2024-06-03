@@ -36,19 +36,19 @@ main {
     text-align: justify;
 }
 
-#to_show_when_generate {
+#to_show_when_generate, #minor1, #minor2 {
     display: none;
 }
 
 .courses {
     display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px 200px 200px;
     gap: 10px;
 }
 
 #generated {
     display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px 200px 200px;
     gap: 10px;
 }
 
