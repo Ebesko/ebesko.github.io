@@ -38,21 +38,25 @@ async function start() {
     const reponse = await fetch("bild.json");
     const bild = await reponse.json();
 
-    const module = bild[0];
-    const numberElement = document.createElement("p");
-    numberElement.innerText = module.num;
-    const nomElement = document.createElement("p");
-    nomElement.innerText = module.nom;
-    const pointsElement = document.createElement("p");
-    pointsElement.innerText = module.ECTS;
-    const semesterElement = document.createElement("p");
-    semesterElement.innerText = module.semestre;
+    for (module in bild) {
 
-    const divmodulen = document.querySelector(".modul");
-    divmodulen.appendChild(numberElement);
-    divmodulen.appendChild(nomElement);
-    divmodulen.appendChild(pointsElement);
-    divmodulen.appendChild(semesterElement);
+        const module = bild[module];
+        const numberElement = document.createElement("p");
+        numberElement.innerText = module.num;
+        const nomElement = document.createElement("p");
+        nomElement.innerText = module.nom;
+        const pointsElement = document.createElement("p");
+        pointsElement.innerText = module.ECTS;
+        const semesterElement = document.createElement("p");
+        semesterElement.innerText = module.semestre;
 
-    document.getElementById(generated).style.display = 'grid';
+        const divmodulen = document.querySelector(".modul");
+        divmodulen.appendChild(numberElement);
+        divmodulen.appendChild(nomElement);
+        divmodulen.appendChild(pointsElement);
+        divmodulen.appendChild(semesterElement);
+
+        document.getElementById(generated).style.display = 'grid';
+    }
+    
 }
