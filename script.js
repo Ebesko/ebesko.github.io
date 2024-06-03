@@ -32,32 +32,34 @@ function minitest() {
     var nbfname = document.getElementById("minor");
     document.getElementById("to_show_when_generate").innerHTML = nbfname.value;
 
-    //document.getElementById(generated).style.display = 'grid';
+    //
 }
 
 async function start() {
     // Récupération des cours depuis le fichier JSON
+    document.getElementById("generated").innerHTML = "";
     const reponse = await fetch("bild.json");
     const bild = await reponse.json();
 
     for (modules in bild) {
 
-        const module = bild[modules];
-        const numberElement = document.createElement("p");
+        var module = bild[modules];
+        var numberElement = document.createElement("p");
         numberElement.innerText = module.num;
-        const nomElement = document.createElement("p");
+        var nomElement = document.createElement("p");
         nomElement.innerText = module.nom;
-        const pointsElement = document.createElement("p");
+        var pointsElement = document.createElement("p");
         pointsElement.innerText = module.ECTS;
-        const semesterElement = document.createElement("p");
+        var semesterElement = document.createElement("p");
         semesterElement.innerText = module.semestre;
 
-        const divmodulen = document.querySelector(".modul");
+        var divmodulen = document.querySelector(".modul");
         divmodulen.appendChild(numberElement);
         divmodulen.appendChild(nomElement);
         divmodulen.appendChild(pointsElement);
         divmodulen.appendChild(semesterElement);
 
     }
+    document.getElementById("generated").style.display = 'grid';
     
 }
