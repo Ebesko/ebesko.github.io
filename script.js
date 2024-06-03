@@ -31,6 +31,8 @@ function getdiffvalues() {
 function minitest() {
     var nbfname = document.getElementById("minor");
     document.getElementById("to_show_when_generate").innerHTML = nbfname.value;
+
+    //document.getElementById(generated).style.display = 'grid';
 }
 
 async function start() {
@@ -56,7 +58,6 @@ async function start() {
         divmodulen.appendChild(pointsElement);
         divmodulen.appendChild(semesterElement);
 
-        document.getElementById(generated).style.display = 'grid';
     }
     
 }
