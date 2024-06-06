@@ -1,31 +1,31 @@
 ﻿[
   {
-    "num": "22-1.1_a",
-    "nom": " Grundmodul Antike",
+    "num": "22-BKG-GM1",
+    "nom": " Grundmodul Bild- und Kunstgeschichte I ",
     "ECTS": 10,
     "semestre": 1,
     "choix": "Obligatoire"
   },
 
   {
-    "num": "22-1.2_b",
-    "nom": "Grundmodul Mittelalter/ Frühe Neuzeit - Moderne",
-    "ECTS": 20,
+    "num": "22-BKG-GM2",
+    "nom": "Grundmodul Bild- und Kunstgeschichte II ",
+    "ECTS": 10,
     "semestre": 2,
     "choix": "Obligatoire"
   },
 
   {
-    "num": "22-2.5",
-    "nom": "Modul Geschichte und Öffentlichkeit Sommerschulen",
+    "num": "22-BKG-MTM",
+    "nom": "Theorien und Methoden der Bild- und Kunstgeschichte ",
     "ECTS": 10,
     "semestre": 3,
     "choix": "Obligatoire"
   },
 
   {
-    "num": "22-3.1/22-3.2",
-    "nom": "Hauptmodul Vormoderne oder Hauptmodul Moderne",
+    "num": "22-BKG-HVM",
+    "nom": " Hauptmodul Bild- und Kunstgeschichte der Vormoderne",
     "ECTS": 10,
     "semestre": 4,
     "choix": "Obligatoire"
