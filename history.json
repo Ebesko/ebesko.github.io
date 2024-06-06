@@ -4,7 +4,7 @@
     "nom": " Grundmodul Antike",
     "ECTS": 10,
     "semestre": 1,
-    "choix": "obligatoire"
+    "choix": "Obligatoire"
   },
 
   {
@@ -12,7 +12,7 @@
     "nom": "Grundmodul Mittelalter/ Frühe Neuzeit - Moderne",
     "ECTS": 20,
     "semestre": 2,
-    "choix": "obligatoire"
+    "choix": "Obligatoire"
   },
 
   {
@@ -20,7 +20,7 @@
     "nom": "Modul Geschichte und Öffentlichkeit Sommerschulen",
     "ECTS": 10,
     "semestre": 3,
-    "choix": "obligatoire"
+    "choix": "Obligatoire"
   },
 
   {
@@ -28,6 +28,6 @@
     "nom": "Hauptmodul Vormoderne oder Hauptmodul Moderne",
     "ECTS": 10,
     "semestre": 4,
-    "choix": "obligatoire"
+    "choix": "Obligatoire"
   }
 ]

@@ -47,9 +47,13 @@ async function start() {
     var nbfname = document.getElementById("minor");
     var semester_gwlt = document.getElementById("semester");
 
-    // Récupération des cours depuis le fichier JSON
-    const reponse = await fetch("bild.json");
-    const bild = await reponse.json();
+    // Récupération des cours depuis le fichier JSON:
+    //Histoire (dans tout les cas):
+    const reponse_history = await fetch("history.json");
+    const hist = reponse_history.json();
+
+    const reponse_bild = await fetch("/minor/bild.json");
+    const bild = await reponse_bild.json();
 
     console.log(semester_gwlt.value)
 
@@ -75,9 +79,51 @@ async function start() {
             divmodulen.appendChild(semesterElement);
             divmodulen.appendChild(choiceElement);
         } 
+        for (modules in hist) {
+            console.log("in loop");
+            var module = hist[modules];
+            var numberElement = document.createElement("p");
+            numberElement.innerText = module.num;
+            var nomElement = document.createElement("p");
+            nomElement.innerText = module.nom;
+            var pointsElement = document.createElement("p");
+            pointsElement.innerText = module.ECTS;
+            var semesterElement = document.createElement("p");
+            semesterElement.innerText = module.semestre;
+            var choiceElement = document.createElement("p");
+            choiceElement.innerText = module.choix;
+
+            var divmodulen = document.querySelector(".modul");
+            divmodulen.appendChild(numberElement);
+            divmodulen.appendChild(nomElement);
+            divmodulen.appendChild(pointsElement);
+            divmodulen.appendChild(semesterElement);
+            divmodulen.appendChild(choiceElement);
+        } 
     } else {
         console.log("else value:" + semester_gwlt.value);
+
         var choosen_semester = semester_gwlt.value - 1;
+
+        var choosen_module = hist[choosen_semester];
+        var numberElement = document.createElement("p");
+        numberElement.innerText = choosen_module.num;
+        var nomElement = document.createElement("p");
+        nomElement.innerText = choosen_module.nom;
+        var pointsElement = document.createElement("p");
+        pointsElement.innerText = choosen_module.ECTS;
+        var semesterElement = document.createElement("p");
+        semesterElement.innerText = choosen_module.semestre;
+        var choiceElement = document.createElement("p");
+        choiceElement.innerText = choosen_module.choix;
+
+        var divmodulen = document.querySelector(".modul");
+        divmodulen.appendChild(numberElement);
+        divmodulen.appendChild(nomElement);
+        divmodulen.appendChild(pointsElement);
+        divmodulen.appendChild(semesterElement);
+        divmodulen.appendChild(choiceElement);
+
         var choosen_module = bild[choosen_semester];
         var numberElement = document.createElement("p");
         numberElement.innerText = choosen_module.num;
