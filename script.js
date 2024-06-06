@@ -52,8 +52,7 @@ async function start() {
     const reponse_history = await fetch("history.json");
     const hist = reponse_history.json();
 
-    const reponse_bild = await fetch("/this/minor/bild.json");
-    const bild = await reponse_bild.json();
+    const bild = hist;
 
     console.log(semester_gwlt.value)
 
