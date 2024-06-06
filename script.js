@@ -51,24 +51,24 @@ async function start() {
     const reponse = await fetch("bild.json");
     const bild = await reponse.json();
 
-    if (semester_gwlt == "all")
+    if (semester_gwlt.value == "all")
         {
             console.log("all");
     }
 
-    if (semester_gwlt != "all") {
+    if (semester_gwlt.value != "all") {
         console.log("autre");
     }
 
-    if (semester_gwlt == "1") {
+    if (semester_gwlt.value == "1") {
         console.log("string 1");
     }
 
-    if (semester_gwlt == 1) {
+    if (semester_gwlt.value == 1) {
         console.log("1 num");
     }
 
-    console.log(semester_gwlt)
+    console.log(semester_gwlt.value)
 
     for (modules in bild) {
         console.log("in loop");
