@@ -68,6 +68,8 @@ async function start() {
         console.log("1 num");
     }
 
+    console.log(semester_gwlt)
+
     for (modules in bild) {
         console.log("in loop");
         var module = bild[modules];
