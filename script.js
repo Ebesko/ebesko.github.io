@@ -51,28 +51,33 @@ async function start() {
     const reponse = await fetch("bild.json");
     const bild = await reponse.json();
 
-    if (semester_gwlt.value == "all")
-        {
-            console.log("all");
-    }
-
-    if (semester_gwlt.value != "all") {
-        console.log("autre");
-    }
-
-    if (semester_gwlt.value == "1") {
-        console.log("string 1");
-    }
-
-    if (semester_gwlt.value == 1) {
-        console.log("1 num");
-    }
-
     console.log(semester_gwlt.value)
 
-    for (modules in bild) {
-        console.log("in loop");
-        var module = bild[modules];
+    if (semester_gwlt.value != "all") {
+        for (modules in bild) {
+            console.log("in loop");
+            var module = bild[modules];
+            var numberElement = document.createElement("p");
+            numberElement.innerText = module.num;
+            var nomElement = document.createElement("p");
+            nomElement.innerText = module.nom;
+            var pointsElement = document.createElement("p");
+            pointsElement.innerText = module.ECTS;
+            var semesterElement = document.createElement("p");
+            semesterElement.innerText = module.semestre;
+            var choiceElement = document.createElement("p");
+            choiceElement.innerText = module.choix;
+
+            var divmodulen = document.querySelector(".modul");
+            divmodulen.appendChild(numberElement);
+            divmodulen.appendChild(nomElement);
+            divmodulen.appendChild(pointsElement);
+            divmodulen.appendChild(semesterElement);
+            divmodulen.appendChild(choiceElement);
+        } 
+    } else {
+        console.log("else");
+        var module = bild[semester_gwlt.value];
         var numberElement = document.createElement("p");
         numberElement.innerText = module.num;
         var nomElement = document.createElement("p");
@@ -91,6 +96,7 @@ async function start() {
         divmodulen.appendChild(semesterElement);
         divmodulen.appendChild(choiceElement);
     }
+    
     document.getElementById("generated").style.display = 'grid';
     
 }
