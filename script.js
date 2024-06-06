@@ -71,7 +71,7 @@ async function start() {
             var choiceElement = document.createElement("p");
             choiceElement.innerText = module.choix;
 
-            var divmodulen = document.querySelector(".modul");
+            var divmodulen = document.querySelector(".modul-minor");
             divmodulen.appendChild(numberElement);
             divmodulen.appendChild(nomElement);
             divmodulen.appendChild(pointsElement);
@@ -92,7 +92,7 @@ async function start() {
             var choiceElement = document.createElement("p");
             choiceElement.innerText = module.choix;
 
-            var divmodulen = document.querySelector(".modul");
+            var divmodulen = document.querySelector(".modul-hist");
             divmodulen.appendChild(numberElement);
             divmodulen.appendChild(nomElement);
             divmodulen.appendChild(pointsElement);
@@ -116,7 +116,7 @@ async function start() {
         var choiceElement = document.createElement("p");
         choiceElement.innerText = choosen_module.choix;
 
-        var divmodulen = document.querySelector(".modul");
+        var divmodulen = document.querySelector(".modul-hist");
         divmodulen.appendChild(numberElement);
         divmodulen.appendChild(nomElement);
         divmodulen.appendChild(pointsElement);
@@ -135,7 +135,7 @@ async function start() {
         var choiceElement = document.createElement("p");
         choiceElement.innerText = choosen_module.choix;
 
-        var divmodulen = document.querySelector(".modul");
+        var divmodulen = document.querySelector(".modul-minor");
         divmodulen.appendChild(numberElement);
         divmodulen.appendChild(nomElement);
         divmodulen.appendChild(pointsElement);
