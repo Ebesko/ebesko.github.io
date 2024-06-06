@@ -45,11 +45,28 @@ async function start() {
     var year = document.getElementById("year");
     var nbftyp2 = document.getElementById("minortyptest");
     var nbfname = document.getElementById("minor");
-    var semester = document.getElementById("semester");
+    var semester_gwlt = document.getElementById("semester");
 
     // Récupération des cours depuis le fichier JSON
     const reponse = await fetch("bild.json");
     const bild = await reponse.json();
+
+    if (semester_gwlt == "all")
+        {
+            console.log("all");
+    }
+
+    if (semester_gwlt != "all") {
+        console.log("autre");
+    }
+
+    if (semester_gwlt == "1") {
+        console.log("string 1");
+    }
+
+    if (semester_gwlt == 1) {
+        console.log("1 num");
+    }
 
     for (modules in bild) {
         console.log("in loop");
