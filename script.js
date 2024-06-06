@@ -76,18 +76,18 @@ async function start() {
             divmodulen.appendChild(choiceElement);
         } 
     } else {
-        console.log("else");
-        var module = bild[semester_gwlt.value];
+        console.log("else " + semester_gwlt.value);
+        var choosen_module = bild[semester_gwlt.value];
         var numberElement = document.createElement("p");
-        numberElement.innerText = module.num;
+        numberElement.innerText = choosen_module.num;
         var nomElement = document.createElement("p");
-        nomElement.innerText = module.nom;
+        nomElement.innerText = choosen_module.nom;
         var pointsElement = document.createElement("p");
-        pointsElement.innerText = module.ECTS;
+        pointsElement.innerText = choosen_module.ECTS;
         var semesterElement = document.createElement("p");
-        semesterElement.innerText = module.semestre;
+        semesterElement.innerText = choosen_module.semestre;
         var choiceElement = document.createElement("p");
-        choiceElement.innerText = module.choix;
+        choiceElement.innerText = choosen_module.choix;
 
         var divmodulen = document.querySelector(".modul");
         divmodulen.appendChild(numberElement);
