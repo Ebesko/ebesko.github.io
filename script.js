@@ -77,6 +77,7 @@ async function start() {
         } 
     } else {
         console.log("else " + semester_gwlt.value);
+        var choosen_semester = semester_gwlt.value - 1;
         var choosen_module = bild[semester_gwlt.value];
         var numberElement = document.createElement("p");
         numberElement.innerText = choosen_module.num;
