@@ -76,7 +76,7 @@ async function start() {
             divmodulen.appendChild(choiceElement);
         } 
     } else {
-        console.log("else " + semester_gwlt.value);
+        console.log("else value:" + semester_gwlt.value);
         var choosen_semester = semester_gwlt.value - 1;
         var choosen_module = bild[choosen_semester];
         var numberElement = document.createElement("p");
