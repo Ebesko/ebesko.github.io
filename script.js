@@ -53,7 +53,7 @@ async function start() {
 
     console.log(semester_gwlt.value)
 
-    if (semester_gwlt.value != "all") {
+    if (semester_gwlt.value == "all") {
         for (modules in bild) {
             console.log("in loop");
             var module = bild[modules];
