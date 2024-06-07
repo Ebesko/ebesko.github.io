@@ -50,10 +50,10 @@ async function start() {
     // Récupération des cours depuis le fichier JSON:
     //Histoire (dans tout les cas):
     const reponse_history = await fetch("megatest.json");
-    const hist = reponse_history.json();
+    const hist = await reponse_history.json();
 
     const reponse_bild = await fetch("history.json");
-    const bild = reponse_bild.json();
+    const bild = await reponse_bild.json();
 
     console.log(semester_gwlt.value)
     console.log(bild)
