@@ -105,7 +105,7 @@ async function start() {
             divmodulen.appendChild(choiceElement);
         } 
     } else {
-        //Si un semestre et pas tous les modules
+        //Si un semestre et pas tous les modules 
         console.log("else value:" + semester_gwlt.value);
 
         var numberElement = document.createElement("p");
