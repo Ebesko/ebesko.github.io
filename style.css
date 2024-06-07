@@ -50,7 +50,7 @@ main {
 #generated {
     display: grid;
     grid-template-columns: 200px 400px 100px 100px 200px;
-    gap: 10px;
+    gap: 20px;
 }
 
 .box {
