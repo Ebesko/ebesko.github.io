@@ -52,7 +52,8 @@ async function start() {
     const reponse_history = await fetch("megatest.json");
     const hist = reponse_history.json();
 
-    const bild = reponse_history.json();
+    const reponse_bild = await fetch("history.json");
+    const bild = reponse_bild.json();
 
     console.log(semester_gwlt.value)
     console.log(bild)
