@@ -137,12 +137,12 @@ async function start() {
         var choiceElement = document.createElement("p");
         choiceElement.innerText = bild[(semester_gwlt.value - 1)].choix;
 
-        var divmodulen = document.querySelector(".modul-minor");
-        divmodulen.appendChild(numberElement);
-        divmodulen.appendChild(nomElement);
-        divmodulen.appendChild(pointsElement);
-        divmodulen.appendChild(semesterElement);
-        divmodulen.appendChild(choiceElement);
+        var divmodulen_bild = document.querySelector(".modul-minor");
+        divmodulen_bild.appendChild(numberElement);
+        divmodulen_bild.appendChild(nomElement);
+        divmodulen_bild.appendChild(pointsElement);
+        divmodulen_bild.appendChild(semesterElement);
+        divmodulen_bild.appendChild(choiceElement);
     }
     
     document.getElementById("generated").style.display = 'grid';
