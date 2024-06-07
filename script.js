@@ -61,9 +61,8 @@ async function start() {
 
     if (semester_gwlt.value == "all") {
         //Modules de mineure
-        for (let moduled of bild) {
+        for (let module_of_bild of bild) {
             console.log("in loop bild");
-            var module_of_bild = bild[moduled];
 
             var numberElement2 = document.createElement("p");
             numberElement2.innerText = module_of_bild.num;
