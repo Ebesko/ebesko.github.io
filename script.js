@@ -60,7 +60,7 @@ async function start() {
     if (semester_gwlt.value == "all") {
         //Modules de mineure
         for (let module_of_bild of bild) {
-            console.log("in loop");
+            console.log("in loop bild");
             
             var numberElement = document.createElement("p");
             numberElement.innerText = module_of_bild.num;
@@ -80,9 +80,11 @@ async function start() {
             divmodulen.appendChild(semesterElement);
             divmodulen.appendChild(choiceElement);
         } 
+        console.log("One full bild loop")
+
         // Modules d'Histoire
         for (let modules in hist) {
-            console.log("in loop");
+            console.log("in loop hist");
             var module_of_hist = hist[modules];
             var numberElement = document.createElement("p");
             numberElement.innerText = module_of_hist.num;
@@ -106,8 +108,6 @@ async function start() {
         //Si un semestre et pas tous les modules
         console.log("else value:" + semester_gwlt.value);
 
-
-        var choosen_module = hist[(semester_gwlt.value - 1)];
         var numberElement = document.createElement("p");
         numberElement.innerText = hist[(semester_gwlt.value - 1)].num;
         var nomElement = document.createElement("p");
@@ -126,7 +126,6 @@ async function start() {
         divmodulen.appendChild(semesterElement);
         divmodulen.appendChild(choiceElement);
 
-        var choosen_module = bild[(semester_gwlt.value - 1)];
         var numberElement = document.createElement("p");
         numberElement.innerText = bild[(semester_gwlt.value - 1)].num;
         var nomElement = document.createElement("p");
