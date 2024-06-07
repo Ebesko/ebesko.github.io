@@ -49,14 +49,13 @@ async function start() {
 
     // Récupération des cours depuis le fichier JSON:
     //Histoire (dans tout les cas):
-    const reponse_history = await fetch("megatest.json");
+    const reponse_history = await fetch("history.json");
     const hist = await reponse_history.json();
 
-    const reponse_bild = await fetch("history.json");
+    const reponse_bild = await fetch("minor/bild.json");
     const bild = await reponse_bild.json();
 
     console.log(semester_gwlt.value)
-    console.log(bild)
 
     if (semester_gwlt.value == "all") {
         //Modules de mineure
@@ -107,19 +106,18 @@ async function start() {
         //Si un semestre et pas tous les modules
         console.log("else value:" + semester_gwlt.value);
 
-        var choosen_semester = semester_gwlt.value - 1;
 
-        var choosen_module = hist[choosen_semester];
+        var choosen_module = hist[(semester_gwlt.value - 1)];
         var numberElement = document.createElement("p");
-        numberElement.innerText = choosen_module.num;
+        numberElement.innerText = hist[(choosen_semester - 1)].num;
         var nomElement = document.createElement("p");
-        nomElement.innerText = choosen_module.nom;
+        nomElement.innerText = hist[(choosen_semester - 1)].nom;
         var pointsElement = document.createElement("p");
-        pointsElement.innerText = choosen_module.ECTS;
+        pointsElement.innerText = hist[(choosen_semester - 1)].ECTS;
         var semesterElement = document.createElement("p");
-        semesterElement.innerText = choosen_module.semestre;
+        semesterElement.innerText = hist[(choosen_semester - 1)].semestre;
         var choiceElement = document.createElement("p");
-        choiceElement.innerText = choosen_module.choix;
+        choiceElement.innerText = hist[(choosen_semester - 1)].choix;
 
         var divmodulen = document.querySelector(".modul-hist");
         divmodulen.appendChild(numberElement);
@@ -128,17 +126,17 @@ async function start() {
         divmodulen.appendChild(semesterElement);
         divmodulen.appendChild(choiceElement);
 
-        var choosen_module = bild[choosen_semester];
+        var choosen_module = bild[(semester_gwlt.value - 1)];
         var numberElement = document.createElement("p");
-        numberElement.innerText = choosen_module.num;
+        numberElement.innerText = bild[(semester_gwlt.value - 1)].num;
         var nomElement = document.createElement("p");
-        nomElement.innerText = choosen_module.nom;
+        nomElement.innerText = bild[(semester_gwlt.value - 1)].nom;
         var pointsElement = document.createElement("p");
-        pointsElement.innerText = choosen_module.ECTS;
+        pointsElement.innerText = bild[(semester_gwlt.value - 1)].ECTS;
         var semesterElement = document.createElement("p");
-        semesterElement.innerText = choosen_module.semestre;
+        semesterElement.innerText = bild[(semester_gwlt.value - 1)].semestre;
         var choiceElement = document.createElement("p");
-        choiceElement.innerText = choosen_module.choix;
+        choiceElement.innerText = bild[(semester_gwlt.value - 1)].choix;
 
         var divmodulen = document.querySelector(".modul-minor");
         divmodulen.appendChild(numberElement);
