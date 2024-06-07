@@ -1,4 +1,4 @@
-﻿function showStuff(id, text, btn) {
+function showStuff(id, text, btn) {
     document.getElementById(id).style.display = 'grid';
     document.getElementById(text).style.display = 'none';
     btn.style.display = 'block';
@@ -38,6 +38,8 @@ function minitest() {
 async function start() {
     //Clean before use
     document.getElementById("generated").innerHTML = "";
+    var divmodulen_bild = document.querySelector(".modul-minor");
+    divmodulen_bild.innerHTML = "";
 
     // Récupération des données de formulaire
     const data = new FormData(myform);
@@ -59,26 +61,27 @@ async function start() {
 
     if (semester_gwlt.value == "all") {
         //Modules de mineure
-        for (let module_of_bild of bild) {
+        for (let moduled of bild) {
             console.log("in loop bild");
-            
-            var numberElement = document.createElement("p");
-            numberElement.innerText = module_of_bild.num;
-            var nomElement = document.createElement("p");
-            nomElement.innerText = module_of_bild.nom;
-            var pointsElement = document.createElement("p");
-            pointsElement.innerText = module_of_bild.ECTS;
-            var semesterElement = document.createElement("p");
-            semesterElement.innerText = module_of_bild.semestre;
-            var choiceElement = document.createElement("p");
-            choiceElement.innerText = module_of_bild.choix;
+            var module_of_bild = bild[moduled];
 
-            var divmodulen = document.querySelector(".modul-minor");
-            divmodulen.appendChild(numberElement);
-            divmodulen.appendChild(nomElement);
-            divmodulen.appendChild(pointsElement);
-            divmodulen.appendChild(semesterElement);
-            divmodulen.appendChild(choiceElement);
+            var numberElement2 = document.createElement("p");
+            numberElement2.innerText = module_of_bild.num;
+            var nomElement2 = document.createElement("p");
+            nomElement2.innerText = module_of_bild.nom;
+            var pointsElement2 = document.createElement("p");
+            pointsElement2.innerText = module_of_bild.ECTS;
+            var semesterElement2 = document.createElement("p");
+            semesterElement2.innerText = module_of_bild.semestre;
+            var choiceElement2 = document.createElement("p");
+            choiceElement2.innerText = module_of_bild.choix;
+
+            var divmodulen2 = document.querySelector(".modul-minor");
+            divmodulen2.appendChild(numberElement2);
+            divmodulen2.appendChild(nomElement2);
+            divmodulen2.appendChild(pointsElement2);
+            divmodulen2.appendChild(semesterElement2);
+            divmodulen2.appendChild(choiceElement2);
         } 
         console.log("One full bild loop")
 
@@ -86,6 +89,7 @@ async function start() {
         for (let modules in hist) {
             console.log("in loop hist");
             var module_of_hist = hist[modules];
+
             var numberElement = document.createElement("p");
             numberElement.innerText = module_of_hist.num;
             var nomElement = document.createElement("p");
@@ -129,23 +133,23 @@ async function start() {
         divmodulen.appendChild(semesterElement);
         divmodulen.appendChild(choiceElement);
 
-        var numberElement = document.createElement("p");
-        numberElement.innerText = bild[(semester_gwlt.value - 1)].num;
-        var nomElement = document.createElement("p");
-        nomElement.innerText = bild[(semester_gwlt.value - 1)].nom;
-        var pointsElement = document.createElement("p");
-        pointsElement.innerText = bild[(semester_gwlt.value - 1)].ECTS;
-        var semesterElement = document.createElement("p");
-        semesterElement.innerText = bild[(semester_gwlt.value - 1)].semestre;
-        var choiceElement = document.createElement("p");
-        choiceElement.innerText = bild[(semester_gwlt.value - 1)].choix;
+        var numberElement2 = document.createElement("p");
+        numberElement2.innerText = bild[(semester_gwlt.value - 1)].num;
+        var nomElement2 = document.createElement("p");
+        nomElement2.innerText = bild[(semester_gwlt.value - 1)].nom;
+        var pointsElement2 = document.createElement("p");
+        pointsElement2.innerText = bild[(semester_gwlt.value - 1)].ECTS;
+        var semesterElement2 = document.createElement("p");
+        semesterElement2.innerText = bild[(semester_gwlt.value - 1)].semestre;
+        var choiceElement2 = document.createElement("p");
+        choiceElement2.innerText = bild[(semester_gwlt.value - 1)].choix;
 
         var divmodulen_bild = document.querySelector(".modul-minor");
-        divmodulen_bild.appendChild(numberElement);
-        divmodulen_bild.appendChild(nomElement);
-        divmodulen_bild.appendChild(pointsElement);
-        divmodulen_bild.appendChild(semesterElement);
-        divmodulen_bild.appendChild(choiceElement);
+        divmodulen_bild.appendChild(numberElement2);
+        divmodulen_bild.appendChild(nomElement2);
+        divmodulen_bild.appendChild(pointsElement2);
+        divmodulen_bild.appendChild(semesterElement2);
+        divmodulen_bild.appendChild(choiceElement2);
     }
     
     document.getElementById("generated").style.display = 'grid';
