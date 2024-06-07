@@ -109,7 +109,7 @@ async function start() {
         console.log("else value:" + semester_gwlt.value);
         
         //Safety clean 
-        document.getElementById("generated").innerHTML = "";
+        document.getElementsByClassName("modul-minor");.innerHTML = "";
 
         var numberElement = document.createElement("p");
         numberElement.innerText = hist[(semester_gwlt.value - 1)].num;
