@@ -111,8 +111,7 @@ async function start() {
         //Si un semestre et pas tous les modules 
         console.log("else value:" + semester_gwlt.value);
         
-        //Safety clean 
-        document.getElementByClassName("modul-minor").innerHTML = "";
+        //Safety clean document.getElementByClassName("modul-minor").innerHTML = "";
 
         var numberElement = document.createElement("p");
         numberElement.innerText = hist[(semester_gwlt.value - 1)].num;
