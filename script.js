@@ -109,15 +109,15 @@ async function start() {
 
         var choosen_module = hist[(semester_gwlt.value - 1)];
         var numberElement = document.createElement("p");
-        numberElement.innerText = hist[(choosen_semester - 1)].num;
+        numberElement.innerText = hist[(semester_gwlt.value - 1)].num;
         var nomElement = document.createElement("p");
-        nomElement.innerText = hist[(choosen_semester - 1)].nom;
+        nomElement.innerText = hist[(semester_gwlt.value - 1)].nom;
         var pointsElement = document.createElement("p");
-        pointsElement.innerText = hist[(choosen_semester - 1)].ECTS;
+        pointsElement.innerText = hist[(semester_gwlt.value - 1)].ECTS;
         var semesterElement = document.createElement("p");
-        semesterElement.innerText = hist[(choosen_semester - 1)].semestre;
+        semesterElement.innerText = hist[(semester_gwlt.value - 1)].semestre;
         var choiceElement = document.createElement("p");
-        choiceElement.innerText = hist[(choosen_semester - 1)].choix;
+        choiceElement.innerText = hist[(semester_gwlt.value - 1)].choix;
 
         var divmodulen = document.querySelector(".modul-hist");
         divmodulen.appendChild(numberElement);
