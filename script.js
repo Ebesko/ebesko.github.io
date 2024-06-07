@@ -49,12 +49,13 @@ async function start() {
 
     // Récupération des cours depuis le fichier JSON:
     //Histoire (dans tout les cas):
-    const reponse_history = await fetch("history.json");
+    const reponse_history = await fetch("megatest.json");
     const hist = reponse_history.json();
 
-    const bild = hist;
+    const bild = reponse_history.json();
 
     console.log(semester_gwlt.value)
+    console.log(bild)
 
     if (semester_gwlt.value == "all") {
         //Modules de mineure
