@@ -62,17 +62,17 @@ async function start() {
         //Modules de mineure
         for (let modules of bild) {
             console.log("in loop");
-            var module = bild[modules];
+            var module_of_bild = bild[modules];
             var numberElement = document.createElement("p");
-            numberElement.innerText = module.num;
+            numberElement.innerText = module_of_bild.num;
             var nomElement = document.createElement("p");
-            nomElement.innerText = module.nom;
+            nomElement.innerText = module_of_bild.nom;
             var pointsElement = document.createElement("p");
-            pointsElement.innerText = module.ECTS;
+            pointsElement.innerText = module_of_bild.ECTS;
             var semesterElement = document.createElement("p");
-            semesterElement.innerText = module.semestre;
+            semesterElement.innerText = module_of_bild.semestre;
             var choiceElement = document.createElement("p");
-            choiceElement.innerText = module.choix;
+            choiceElement.innerText = module_of_bild.choix;
 
             var divmodulen = document.querySelector(".modul-minor");
             divmodulen.appendChild(numberElement);
@@ -84,17 +84,17 @@ async function start() {
         // Modules d'Histoire
         for (let modules in hist) {
             console.log("in loop");
-            var module = hist[modules];
+            var module_of_hist = hist[modules];
             var numberElement = document.createElement("p");
-            numberElement.innerText = module.num;
+            numberElement.innerText = module_of_hist.num;
             var nomElement = document.createElement("p");
-            nomElement.innerText = module.nom;
+            nomElement.innerText = module_of_hist.nom;
             var pointsElement = document.createElement("p");
-            pointsElement.innerText = module.ECTS;
+            pointsElement.innerText = module_of_hist.ECTS;
             var semesterElement = document.createElement("p");
-            semesterElement.innerText = module.semestre;
+            semesterElement.innerText = module_of_hist.semestre;
             var choiceElement = document.createElement("p");
-            choiceElement.innerText = module.choix;
+            choiceElement.innerText = module_of_hist.choix;
 
             var divmodulen = document.querySelector(".modul-hist");
             divmodulen.appendChild(numberElement);
