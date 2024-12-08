@@ -1,116 +1,121 @@
-<!DOCTYPE html>
-<html lang="fr">
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BiPaG - CIFAH</title>
-    <script type="text/javascript" src="script.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <title>Portfolio Test</title>
+    <link rel='stylesheet' href='paper.css'>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <a href="index.html"><img src="https://bipagcifah.files.wordpress.com/2021/09/logo_officiel-cursus.webp?w=656&h=132" alt="Logo"></a>
-            </div>
-        </header>
-        <br>
-        <hr style="height:4px;border-width:0;color:rgb(238, 238, 238);background-color:rgb(238, 238, 238)">
-        <br>
-        <main>
-            <div class="content">
-                <h2>App</h2>
-                <p>
-                    Cette application web a pour but de vous aider à remplir votre feuille Erasmus+ qui permet l'obtention de la bourse Erasmus+.
-                    Cette bourse est disponible à partir de la Licence 2. 
-                    Vous pouvez également utiliser cet outil pour visualiser quels cours prendre ce semestre.
-                    A noter que certains cours sont à choisir parmi une sélection (signalé dans la colonne "au choix").
-                    Pour des raisons de sécurité, les données ne sont pas stockées et tous les champs sont réinitialisés si vous quittez le site.
-                </p>
-                <p>Etant donné que la structure de la majeure d'Histoire ou des mineures est parfois changée, veuillez entrer votre année d'inscription.</p>
-                <form method="get" action="" id="myform" class="theform">
-                    <p>
-                        <label for="year">Votre année d'inscription dans le cursus (pour la majeure):</label>
-                        <br><br>
-                        <select name="year" id="year" required>
-                            <option value="24">WiSe 2024 (semestre d'hiver 2024)</option>
-                        </select>
-                        <br><br>
-                        <label for="year">Votre année d'inscription dans votre mineure (même que cursus si vous n'avez pas changé de mineure ou année de changement de mineure):</label>
-                        <br><br>
-                        <select name="year" id="year" required>
-                            <option value="24">WiSe 2024 (semestre d'hiver 2024)</option>
-                        </select>
-                    </p>
-                    <p>
-                        Veuillez indiquer si vous avez une mineure ou deux petites mineures:<br><br>
-                        <select name="minortyptest" id="minortyptest" required>
-                            <option value="nbf" onclick="showSpecial('minor1', 'minor2', this); return false;">Nebenfach (Une seule mineure) </option>
-                            <option value="knbf" onclick="showSpecial('minor2', 'minor1', this); return false;">Kleines Nebenfach (Deux petites mineures)</option>
-                        </select>
-                    </p>
-
-                    <p id="showfirst">Veuillez choisir un type de mineure.</p>
-
-                    <p id="minor1">
-                        <label for="minor">De quelle mineure s'agit-il?</label><br><br>
-                        <select name="minor" id="minor" required>
-                            <option value="bild">Bild- und Kunstgeschichte (Histoire de l'Art)</option>
-                            <option value="politik">Politik</option>
-                            <option value="socio">Soziologie</option>
-                            <option value="latin">Latin</option>
-                        </select>
-                        <br><br><label for="semester">En quel semestre êtes-vous ?</label><br><br>
-                        <select name="semester" id="semester" required>
-                            <option value="all">Montrer tous les semestres</option>
-                            <option value="1">Semestre 1</option>
-                            <option value="2">Semestre 2</option>
-                            <option value="3">Semestre 3</option>
-                            <option value="4">Semestre 4</option>
-                        </select>
-                    </p>
-
-                    <p id="minor2">
-                        <label for="minor">De quelle petite mineure s'agit-il?</label><br><br>
-                        <select name="minor" id="minor" required>
-                            <option value="aesthetisch">Ästhetische Bildung</option>
-                            <option value="litt">Literatur</option>
-                        </select>
-                        <br><br><label for="semester">En quel semestre êtes-vous ?</label><br><br>
-                        <select name="semester" id="semester" required>
-                            <option value="all">Montrer tous les semestres</option>
-                            <option value="1">Semestre 1</option>
-                            <option value="2">Semestre 2</option>
-                            <option value="3">Semestre 3</option>
-                            <option value="4">Semestre 4</option>
-                        </select>
-                    </p>
-                </form>
-                <div id="generate-hidden">
-
-                    <input id="generate" type="button" value="Générer les cours" disabled onclick="start()" style="display:block">
-                    <br>
-                    <div class="courses">
-                        <div class="box">Numéro de module </div>
-                        <div class="box">Nom de module</div>
-                        <div class="box">ECTS</div>
-                        <div class="box">Semestre</div>
-                        <div class="box">Au choix </div>
+    <div id='top' class='row site flex-center'>
+        <div class='sm-12 md-8 col'>
+            <div class='paper'>
+                <div class='demo-title'>
+                    <div class='row flex-center'>
+                        <div class='text-center'>
+                            <h1>Ebesko's Portfolio</h1>
+                            <h3>Made with PaperCSS</h3>
+                        </div>
                     </div>
-                    <div class="modul-hist" id="generated"></div>
-                    <div class="modul-minor" id="generated"></div>
-                    <div class="modul-minor-2" id="generated"></div>
+                    <div class="row flex-center child-borders">
+                        <a class='paper-btn margin' href='index.html'>Home</a>
+                        <a class='paper-btn margin' href='projects.html'>All Projects</a>
+                        <a class='paper-btn margin' href='skills.html'>All Skills</a>
+                    </div>
                 </div>
+                <article class="article">
+                    <p class="text-lead text-center">Hello! I am Ebesko, an Informatik student in Germany.</p>
+                    <h3>Key Skills:</h3>
+                    <section>
+                        <div class='collapsible full-width'>
+                            <input id='collapsible-section-utilities' type='checkbox' name='collapsible-section' checked>
+                            <div class='collapsible-body'>
+                                <div class="row flex-center">
+                                    <!-- Python ------------------------------------------------------------------------->
+                                    <div class="margin" style="width: 15rem;">
+                                        <div>
+                                            <h4 class="card-title">Python</h4>
+                                            <div class="progress margin-bottom">
+                                                <div class="bar w-75"></div>
+                                            </div>
+                                            <p class="card-text">
+                                                (including TKinter, BS4, Panda, ...)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- HTML / CSS ------------------------------------------------------------------------->
+                                    <div class="margin" style="width: 15rem;">
+                                        <div>
+                                            <h4 class="card-title">HTML / CSS</h4>
+                                            <div class="progress margin-bottom">
+                                                <div class="bar w-75"></div>
+                                            </div>
+                                            <p class="card-text">
+                                                (including Responsive Design, Sass)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- Javascript ------------------------------------------------------------------------->
+                                    <div class="margin" style="width: 15rem;">
+                                        <div>
+                                            <h4 class="card-title">Javascript</h4>
+                                            <div class="progress margin-bottom">
+                                                <div class="bar w-25"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END FROM ROW ------------------------------------------------------------------------------>
+                                <div class="row flex-center child-borders">
+                                    <a class='paper-btn margin' href='skills.html'>See here what I also learned but forgot ! (and what I am still learning!)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <h3>Here are my projects:</h3>
+                    <section>
+                        <div class="row child-borders flex-center">
+                            <!-- Actuel Card -->
+                            <div class="card margin flex-center" style="width: 15rem;">
+                                <img src="img-project\less-of-a-mess.JPG" alt="Card example image">
+                                <div class="card-body">
+                                    <h4 class="card-title">Less Of A Mess</h4>
+                                    <h5 class="card-subtitle">Python - Custom TKinter</h5>
+                                    <p class="card-text">
+                                        This desktop app is Web Scrapping courses to help erasmus students to know what
+                                        classes they should take. It shows how much credits you have per checkbox checked. It has a memory of
+                                        state when closed and can update.
+                                    </p>
+                                    <button>Github Repo</button>
+                                </div>
+                            </div>
+                            <!-- More Card -->
+                            <div class="card margin flex-center" style="width: 15rem;">
+                                <img src="img-project\calendar-todo.JPG" alt="Card example image">
+                                <div class="card-body">
+                                    <h4 class="card-title">Calendar To Do</h4>
+                                    <h5 class="card-subtitle">Python - TKinter</h5>
+                                    <p class="card-text">This should originally have been a calendar with a to do list, but life happened and I got attrated by other projects.</p>
+                                    <button>Github Repo</button>
+                                </div>
+                            </div>
+                            <!-- Oldest Card -->
+                            <div class="card margin flex-center" style="width: 15rem;">
+                                <img src="img-project\failure_management.JPG" alt="Card example image">
+                                <div class="card-body">
+                                    <h4 class="card-title">Failure Management - My very first project</h4>
+                                    <h5 class="card-subtitle">Python - TKinter</h5>
+                                    <p class="card-text">This was a kind of joke and also my first try in Desktop Dev. Kinda liked it!</p>
+                                    <h5 class="card-subtitle">What I learned: </h5>
+                                    <p class="card-text">Jokes in code are funny but probably should stop for getting jobs...</p>
+                                    <button>Github Repo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
             </div>
-        </main>
-        <footer>
-            <br><br>
-            <div class="footer-images">
-                <a href="https://u-paris.fr/"><img src="https://bipagcifah.files.wordpress.com/2022/03/universitepariscite_logo_horizontal_couleur_cmjn.jpg?w=423" alt=""></a>
-                <a href="https://uni-bielefeld.de/"><img src="https://bipagcifah.files.wordpress.com/2022/03/uni-bielefeld-logo.jpg?w=768" alt=""></a>
-                <a href="https://www.dfh-ufa.org/fr/"><img src="https://bipagcifah.files.wordpress.com/2022/03/logo_ufa-dfh_rgb_usage_externe-2009.jpg?w=417" alt=""></a>
-            </div>
-        </footer>
+        </div>
     </div>
 </body>
 </html>
