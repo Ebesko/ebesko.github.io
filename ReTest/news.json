@@ -1,30 +1,15 @@
 [
   {
-    "date": "17/11/2024",
-    "txt": "- Màj Logo Lelo",
-    "txt2": "- Màj Responsive",
+    "date": "22/12/2024",
+    "txt": "New version of website",
+    "txt2": "Still changes to be done",
     "txt3": ""
   },
 
   {
-    "date": "09/09/2024",
-    "txt": "- News fonctionnels",
-    "txt2": "",
-    "txt3": ""
-  },
-
-  {
-    "date": "05/09/2024",
-    "txt": "- Site disponible sur portable",
-    "txt2": "- Autocomplétion du formulaire Erasmus grâce à l'application",
-    "txt3": ""
-  },
-
-  {
-    "date": "23/06/2024",
-    "txt": "- Maquette du site en ligne",
-    "txt2": "",
+    "date": "07/12/2024",
+    "txt": "Portfolio first version",
+    "txt2": "PaperCSS",
     "txt3": ""
   }
-
 ]
